@@ -17,7 +17,7 @@ export default function Title() {
           pb={7}
           pt={8}
           w="100vw"
-          bgColor="#2e4b71"
+          bgColor="#729B79"
           color="#F7FAFC"
           fontWeight="thin"
         >
