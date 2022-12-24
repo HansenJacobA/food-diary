@@ -1,1 +1,3 @@
-export default function seedUp(): void {}
+export default function seedUp(): void {
+  //
+}
