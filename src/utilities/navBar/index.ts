@@ -1,7 +1,7 @@
 import { NavBarLinkNameAndUrl } from "../../types";
 
 export const navBarLinkNames: NavBarLinkNameAndUrl[] = [
-  { linkName: "Lessons", url: "/lessons" },
+  { linkName: "History", url: "/history" },
   { linkName: "Dashboard", url: "/home" },
   { linkName: "Notes", url: "/notes" },
 ];
