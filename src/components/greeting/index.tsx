@@ -1,4 +1,4 @@
-import { Flex, Heading } from "@chakra-ui/react";
+import { Fade, Flex, Heading } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 
 export default function Greeting() {
@@ -19,15 +19,17 @@ export default function Greeting() {
 
   return (
     <Flex align="center" justify="center">
-      <Heading
-        as="h2"
-        size="lg"
-        noOfLines={1}
-        textAlign="center"
-        fontWeight="light"
-      >
-        {greeting}
-      </Heading>
+      <Fade in={true}>
+        <Heading
+          as="h2"
+          size="lg"
+          noOfLines={1}
+          textAlign="center"
+          fontWeight="light"
+        >
+          {greeting}
+        </Heading>
+      </Fade>
     </Flex>
   );
 }
