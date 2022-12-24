@@ -17,6 +17,5 @@ export interface Record {
   cupsOfWater: number;
   stoolRating: number;
   happinessRating: number;
-  feelingRating: number;
   recordNotes: string[];
 }

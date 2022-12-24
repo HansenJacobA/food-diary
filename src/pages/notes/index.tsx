@@ -1,6 +1,6 @@
 import Template from "../../components/template";
 import { Flex } from "@chakra-ui/react";
-import NoteForm from "../../components/noteForm";
+import NoteCard from "../../components/noteCard";
 import Greeting from "../../components/greeting";
 
 export default function Notes() {
@@ -15,7 +15,7 @@ export default function Notes() {
     >
       <Template />
       <Greeting />
-      <NoteForm />
+      <NoteCard />
     </Flex>
   );
 }

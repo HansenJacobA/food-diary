@@ -1,6 +1,7 @@
 import { Flex } from "@chakra-ui/react";
 import Template from "../../components/template";
 import Greeting from "../../components/greeting";
+import RecordCard from "../../components/recordCard";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
     >
       <Template />
       <Greeting />
+      <RecordCard />
     </Flex>
   );
 }

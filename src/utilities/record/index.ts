@@ -1,33 +1,18 @@
-import { Day, Record } from "../../types";
-import getValueByKey from "../getValueByKey";
-import setValueByKey from "../setValueByKey";
+import { getCurrentDayRecordsByCurrentDate, upsertDayByDate } from "../day";
+import { Record } from "../../types";
 
-export const templateRecord: Record = {
-  date: new Date().toLocaleDateString(),
-  time: new Date().toLocaleTimeString(),
-  foodName: "",
-  weight: 0,
-  cupsOfWater: 0,
-  stoolRating: 0,
-  happinessRating: 0,
-  feelingRating: 0,
-  recordNotes: [],
+export const submitRecord = (record: Record) => {
+  const day = getCurrentDayRecordsByCurrentDate();
+  day.records.unshift(record);
+  upsertDayByDate(day);
 };
 
-export const templateDay: Day = {
-  date: new Date().toLocaleDateString(),
-  records: [],
-  notes: [],
-};
-
-export const getCurrentDayRecordsByCurrentDate = (): Day => {
-  const days = getValueByKey("days");
-  const currentDate = new Date().toLocaleDateString();
-  return days[currentDate] || { date: currentDate, records: [], notes: [] };
-};
-
-export const upsertDayByDate = (day: Day): void => {
-  const days = getValueByKey("days");
-  days[day.date] = day;
-  setValueByKey("days", days);
+export const validateRecord = (record): Record => {
+  record.date = new Date().toLocaleDateString();
+  record.time = new Date().toLocaleTimeString();
+  record.weight = parseInt(record.weight) || 0;
+  record.cupsOfWater = parseInt(record.cupsOfWater) || 0;
+  record.stoolRating = parseInt(record.stoolRating) || 0;
+  record.happinessRating = parseInt(record.happinessRating) || 0;
+  return record;
 };

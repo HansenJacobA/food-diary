@@ -2,10 +2,10 @@ import { Button, Card, Fade, Flex, Textarea } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { Day } from "../../types";
 import { submitNote } from "../../utilities/notes";
-import { getCurrentDayRecordsByCurrentDate } from "../../utilities/record";
-import { templateDay } from "../../utilities/record";
+import { getCurrentDayRecordsByCurrentDate } from "../../utilities/day";
+import { templateDay } from "../../utilities/day";
 
-export default function NoteForm() {
+export default function NoteCard() {
   const [note, setNote] = useState("");
   const [currentDay, setCurrentDay] = useState<Day>(templateDay);
   const [noteSubmitted, setNoteSubmitted] = useState(false);

@@ -1,4 +1,4 @@
-import { getCurrentDayRecordsByCurrentDate, upsertDayByDate } from "../record";
+import { getCurrentDayRecordsByCurrentDate, upsertDayByDate } from "../day";
 
 export const submitNote = (note: string) => {
   const day = getCurrentDayRecordsByCurrentDate();
