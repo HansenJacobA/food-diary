@@ -1,6 +1,7 @@
 import { Flex } from "@chakra-ui/react";
 import Template from "../../components/template";
 import Greeting from "../../components/greeting";
+import SearchForDay from "../../components/searchForDay";
 
 export default function History() {
   return (
@@ -14,6 +15,7 @@ export default function History() {
     >
       <Template />
       <Greeting />
+      <SearchForDay />
     </Flex>
   );
 }

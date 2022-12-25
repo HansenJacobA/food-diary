@@ -19,3 +19,9 @@ export const upsertDayByDate = (day: Day): void => {
   days[day.date] = day;
   setValueByKey("days", days);
 };
+
+export const getDayRecordsByDate = (date: string) => {
+  const days = getValueByKey("days");
+  const day = days[date];
+  return day?.records || [];
+};
