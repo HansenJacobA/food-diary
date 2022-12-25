@@ -13,8 +13,8 @@ export interface Record {
   date: string;
   time: string;
   foodName: string;
-  weight: number;
   cupsOfWater: number;
+  weight: number;
   stoolRating: number;
   happinessRating: number;
   recordNotes: string[];
