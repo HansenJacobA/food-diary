@@ -36,6 +36,10 @@ export default function SearchForDay() {
           }}
         />
 
+        <Text fontWeight="light" textAlign="center">
+          Select a date to view previous records
+        </Text>
+
         {selectedDayRecords.map((record: Record, recordIndex: number) => (
           <Fade in={true} key={recordIndex}>
             <Card p={3} gap={2}>
